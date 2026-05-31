@@ -38,7 +38,8 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "1de97132-225e-42aa-a6a0-f56085b25329",
-                "cbf404d3-5240-4666-9b20-9eefd5d74b04"
+                "cbf404d3-5240-4666-9b20-9eefd5d74b04",
+                "bbcb6405-c61c-4b39-acce-d5aa89600f0c"
               ],
               "containedElements": [
                 "c2a2aa9f-c8f6-4309-a340-6a8623996ab6",
@@ -69,7 +70,11 @@
                 "9dcddfbc-08af-428e-b3d0-d20e518ab8fc",
                 "1de97132-225e-42aa-a6a0-f56085b25329",
                 "28f79526-a415-4ee5-9710-9c90453f4724",
-                "f47ccf33-bb93-41f8-a49d-4a722664ae48"
+                "f47ccf33-bb93-41f8-a49d-4a722664ae48",
+                "254114f6-30a8-428c-b68d-298cc8ed90fc",
+                "50945837-5c62-4fd9-9f2c-b81f817ad4bc",
+                "43100245-0c06-4834-8142-37a48ec303ac",
+                "bbcb6405-c61c-4b39-acce-d5aa89600f0c"
               ],
               "containedElements": [
                 "0f55223d-e83b-426d-9227-83e199359d43",
@@ -100,7 +105,9 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "f5190927-f063-4139-a989-222a27fa3da6"
+                "f5190927-f063-4139-a989-222a27fa3da6",
+                "2f5677f1-fbc0-41c6-96bb-54f5f0122913",
+                "43100245-0c06-4834-8142-37a48ec303ac"
               ],
               "containedElements": [
                 "9ebb6bc6-f4ce-480c-9a04-fbf816959a0c"
@@ -1057,10 +1064,10 @@
             "vertices": [
               {
                 "x": 480,
-                "y": -207
+                "y": -240
               },
               {
-                "x": 310,
+                "x": 340,
                 "y": -240
               }
             ]
@@ -1137,52 +1144,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Flujo de datos",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Flujo de datos"
-            ],
-            "id": "a886ad15-d04b-4abb-8f14-c84517a9647a",
-            "source": {
-              "x": 649,
-              "y": -27
-            },
-            "target": {
-              "x": 749,
-              "y": 73
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Petición directorio/descarga \n(GET /files bypass requireAuth)",
               "description": "",
               "outOfScope": false,
@@ -1212,8 +1173,8 @@
             },
             "vertices": [
               {
-                "x": 400,
-                "y": -110
+                "x": 360,
+                "y": -50
               }
             ]
           },
@@ -1316,6 +1277,302 @@
               {
                 "x": 300,
                 "y": 0
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Subida a RAM \n(HTTP POST /upload →\n multer.memoryStorage)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "40e90017-3bf1-4f74-b763-a15deaeb42bb"
+              ]
+            },
+            "labels": [
+              "Subida a RAM \n(HTTP POST /upload →\n multer.memoryStorage)"
+            ],
+            "id": "254114f6-30a8-428c-b68d-298cc8ed90fc",
+            "source": {
+              "x": 243,
+              "y": -288
+            },
+            "target": {
+              "cell": "e693a66a-1c59-4fbb-99c4-12a83b318c6e",
+              "port": "af420990-4a8e-4fef-8e1d-ae7ec06d6ffb"
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": -150
+              },
+              {
+                "x": 390,
+                "y": -110
+              },
+              {
+                "x": 470,
+                "y": -80
+              },
+              {
+                "x": 530,
+                "y": -40
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ingreso datos médicos \n(RUT, diagnóstico, HTTP POST)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "40e90017-3bf1-4f74-b763-a15deaeb42bb"
+              ]
+            },
+            "labels": [
+              "Ingreso datos médicos \n(RUT, diagnóstico, HTTP POST)"
+            ],
+            "id": "50945837-5c62-4fd9-9f2c-b81f817ad4bc",
+            "source": {
+              "x": 243,
+              "y": -302
+            },
+            "target": {
+              "cell": "d12eb3d9-97f8-4d00-96fc-e8da523768c4",
+              "port": "5d0b61ff-ae36-4bab-941c-08ca41906e56"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": -160
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Transacción de negocio\n (INSERT/UPDATE/DELETE \nen PostgreSQL TCP/5432)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "424f7246-0a28-4d5a-9e5f-48f2b6ee8f96"
+              ]
+            },
+            "labels": [
+              "Transacción de negocio\n (INSERT/UPDATE/DELETE \nen PostgreSQL TCP/5432)"
+            ],
+            "id": "2f5677f1-fbc0-41c6-96bb-54f5f0122913",
+            "source": {
+              "x": 663,
+              "y": -27
+            },
+            "target": {
+              "cell": "9ebb6bc6-f4ce-480c-9a04-fbf816959a0c",
+              "port": "75568865-12c1-4329-9b80-586a4a8165b0"
+            },
+            "vertices": [
+              {
+                "x": 760,
+                "y": 40
+              },
+              {
+                "x": 1010,
+                "y": 100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Resultset SQL \n(datos de pacientes \ndevueltos al proceso Node.js)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "40e90017-3bf1-4f74-b763-a15deaeb42bb",
+                "424f7246-0a28-4d5a-9e5f-48f2b6ee8f96"
+              ]
+            },
+            "labels": [
+              "Resultset SQL \n(datos de pacientes \ndevueltos al proceso Node.js)"
+            ],
+            "id": "43100245-0c06-4834-8142-37a48ec303ac",
+            "source": {
+              "cell": "9ebb6bc6-f4ce-480c-9a04-fbf816959a0c",
+              "port": "dc28ab5a-2bc7-4c5f-8bf9-57ad30347d01"
+            },
+            "target": {
+              "cell": "d12eb3d9-97f8-4d00-96fc-e8da523768c4",
+              "port": "6637869c-5262-4917-95d0-8ead7a4b98d9"
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 120
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Respuesta JSON al usuario \n(confirmación operación)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "8a77fd5b-59c2-4aa4-8c20-cf7546582764",
+                "40e90017-3bf1-4f74-b763-a15deaeb42bb"
+              ]
+            },
+            "labels": [
+              "Respuesta JSON al usuario \n(confirmación operación)"
+            ],
+            "id": "bbcb6405-c61c-4b39-acce-d5aa89600f0c",
+            "source": {
+              "cell": "d12eb3d9-97f8-4d00-96fc-e8da523768c4",
+              "port": "af420990-4a8e-4fef-8e1d-ae7ec06d6ffb"
+            },
+            "target": {
+              "cell": "25489d03-c34c-4cbd-ad6e-a466c596914e",
+              "port": "c86f561a-abc2-4d43-b4f9-0fb3b55b998a"
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": -190
+              },
+              {
+                "x": 280,
+                "y": -210
+              },
+              {
+                "x": 186,
+                "y": -240
               }
             ]
           },
