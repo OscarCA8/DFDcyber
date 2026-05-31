@@ -28,8 +28,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "8a77fd5b-59c2-4aa4-8c20-cf7546582764",
             "zIndex": -1,
+            "id": "8a77fd5b-59c2-4aa4-8c20-cf7546582764",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Límite de confianza",
@@ -38,8 +38,7 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "1de97132-225e-42aa-a6a0-f56085b25329",
-                "cbf404d3-5240-4666-9b20-9eefd5d74b04",
-                "10e44a34-8276-44ab-8b19-3a7f95a86047"
+                "cbf404d3-5240-4666-9b20-9eefd5d74b04"
               ],
               "containedElements": [
                 "c2a2aa9f-c8f6-4309-a340-6a8623996ab6",
@@ -58,8 +57,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "40e90017-3bf1-4f74-b763-a15deaeb42bb",
             "zIndex": -1,
+            "id": "40e90017-3bf1-4f74-b763-a15deaeb42bb",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Límite de confianza",
@@ -92,8 +91,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "424f7246-0a28-4d5a-9e5f-48f2b6ee8f96",
             "zIndex": -1,
+            "id": "424f7246-0a28-4d5a-9e5f-48f2b6ee8f96",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "",
@@ -129,6 +128,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -212,7 +212,6 @@
               ]
             },
             "id": "c2a2aa9f-c8f6-4309-a340-6a8623996ab6",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Atacante",
@@ -241,8 +240,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "00b77c3f-09d4-4869-98c6-372e24ca7765",
             "zIndex": 3,
+            "id": "00b77c3f-09d4-4869-98c6-372e24ca7765",
             "data": {
               "type": "tm.Text",
               "name": "Frontera de red pública (internet)",
@@ -270,6 +269,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -353,7 +353,6 @@
               ]
             },
             "id": "0f55223d-e83b-426d-9227-83e199359d43",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Módulo de \nautenticación\n/login · /logout",
@@ -390,6 +389,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -473,7 +473,6 @@
               ]
             },
             "id": "e693a66a-1c59-4fbb-99c4-12a83b318c6e",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Gestor de\narchivos (Multer)\n/upload · /files\n· /download",
@@ -510,6 +509,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -593,7 +593,6 @@
               ]
             },
             "id": "d12eb3d9-97f8-4d00-96fc-e8da523768c4",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Gestor fichas\nclínicas\n/pacientes · /users",
@@ -633,6 +632,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -716,7 +716,6 @@
               ]
             },
             "id": "3d5f9c58-a7de-4757-95e3-62c417e11025",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "File system - Documentos\n/files/documents",
@@ -757,6 +756,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -840,7 +840,6 @@
               ]
             },
             "id": "f44517ca-db25-495c-ace2-11c108f591ab",
-            "zIndex": 8,
             "data": {
               "type": "tm.Store",
               "name": "File system - Sesiones\n/sessions (JSON)",
@@ -873,8 +872,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "715fb2ec-bc94-454d-8964-51856268875b",
             "zIndex": 9,
+            "id": "715fb2ec-bc94-454d-8964-51856268875b",
             "data": {
               "type": "tm.Text",
               "name": "Frontera del contenedor app (Docker privilegiado)",
@@ -897,8 +896,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "a836c66d-974e-4b53-8840-1898d458ccce",
             "zIndex": 10,
+            "id": "a836c66d-974e-4b53-8840-1898d458ccce",
             "data": {
               "type": "tm.Text",
               "name": "Frontera de red interna Docker (TCP/5432)",
@@ -1344,6 +1343,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1427,7 +1427,6 @@
               ]
             },
             "id": "9ebb6bc6-f4ce-480c-9a04-fbf816959a0c",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "Base de datos (PostgreSQL)\nusers · pacientes · atenciones · documents",
@@ -1465,6 +1464,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1548,7 +1548,6 @@
               ]
             },
             "id": "25489d03-c34c-4cbd-ad6e-a466c596914e",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Usuario legítimo",
@@ -1559,54 +1558,6 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 13,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Flujo de datos",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "8a77fd5b-59c2-4aa4-8c20-cf7546582764"
-              ]
-            },
-            "labels": [
-              "Flujo de datos"
-            ],
-            "id": "10e44a34-8276-44ab-8b19-3a7f95a86047",
-            "source": {
-              "cell": "c2a2aa9f-c8f6-4309-a340-6a8623996ab6",
-              "port": "c86f561a-abc2-4d43-b4f9-0fb3b55b998a"
-            },
-            "target": {
-              "x": 180,
-              "y": 0
             }
           }
         ],
