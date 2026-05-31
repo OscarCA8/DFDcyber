@@ -69,12 +69,12 @@
               "crossingFlows": [
                 "9dcddfbc-08af-428e-b3d0-d20e518ab8fc",
                 "1de97132-225e-42aa-a6a0-f56085b25329",
-                "28f79526-a415-4ee5-9710-9c90453f4724",
                 "f47ccf33-bb93-41f8-a49d-4a722664ae48",
                 "254114f6-30a8-428c-b68d-298cc8ed90fc",
                 "50945837-5c62-4fd9-9f2c-b81f817ad4bc",
                 "43100245-0c06-4834-8142-37a48ec303ac",
-                "bbcb6405-c61c-4b39-acce-d5aa89600f0c"
+                "bbcb6405-c61c-4b39-acce-d5aa89600f0c",
+                "28f79526-a415-4ee5-9710-9c90453f4724"
               ],
               "containedElements": [
                 "0f55223d-e83b-426d-9227-83e199359d43",
@@ -1144,70 +1144,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Petición directorio/descarga \n(GET /files bypass requireAuth)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "40e90017-3bf1-4f74-b763-a15deaeb42bb"
-              ]
-            },
-            "labels": [
-              "Petición directorio/descarga \n(GET /files bypass requireAuth)"
-            ],
-            "id": "28f79526-a415-4ee5-9710-9c90453f4724",
-            "source": {
-              "x": 243,
-              "y": -181
-            },
-            "target": {
-              "cell": "e693a66a-1c59-4fbb-99c4-12a83b318c6e",
-              "port": "af420990-4a8e-4fef-8e1d-ae7ec06d6ffb"
-            },
-            "vertices": [
-              {
-                "x": 360,
-                "y": -50
-              }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Lectura directa a disco \n(lee CSV/PDF solicitado)",
               "description": "",
               "outOfScope": false,
@@ -1352,7 +1288,7 @@
               },
               {
                 "x": 530,
-                "y": -40
+                "y": -30
               }
             ]
           },
@@ -1583,6 +1519,65 @@
               {
                 "x": 186,
                 "y": -240
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Petición directorio/descarga \n(GET /files bypass requireAuth)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "40e90017-3bf1-4f74-b763-a15deaeb42bb"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Petición directorio/descarga \n(GET /files bypass requireAuth)"
+            ],
+            "id": "28f79526-a415-4ee5-9710-9c90453f4724",
+            "source": {
+              "x": 243,
+              "y": -181
+            },
+            "target": {
+              "cell": "e693a66a-1c59-4fbb-99c4-12a83b318c6e",
+              "port": "af420990-4a8e-4fef-8e1d-ae7ec06d6ffb"
+            },
+            "vertices": [
+              {
+                "x": 360,
+                "y": -50
               }
             ]
           },
@@ -1833,6 +1828,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
