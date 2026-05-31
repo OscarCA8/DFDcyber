@@ -38,8 +38,8 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "1de97132-225e-42aa-a6a0-f56085b25329",
-                "cbf404d3-5240-4666-9b20-9eefd5d74b04",
-                "bbcb6405-c61c-4b39-acce-d5aa89600f0c"
+                "bbcb6405-c61c-4b39-acce-d5aa89600f0c",
+                "cbf404d3-5240-4666-9b20-9eefd5d74b04"
               ],
               "containedElements": [
                 "c2a2aa9f-c8f6-4309-a340-6a8623996ab6",
@@ -74,7 +74,8 @@
                 "50945837-5c62-4fd9-9f2c-b81f817ad4bc",
                 "43100245-0c06-4834-8142-37a48ec303ac",
                 "bbcb6405-c61c-4b39-acce-d5aa89600f0c",
-                "28f79526-a415-4ee5-9710-9c90453f4724"
+                "28f79526-a415-4ee5-9710-9c90453f4724",
+                "cbf404d3-5240-4666-9b20-9eefd5d74b04"
               ],
               "containedElements": [
                 "0f55223d-e83b-426d-9227-83e199359d43",
@@ -1192,60 +1193,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Exfiltración de datos \n(buffer CSV vía HTTP Response)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "8a77fd5b-59c2-4aa4-8c20-cf7546582764"
-              ]
-            },
-            "labels": [
-              "Exfiltración de datos \n(buffer CSV vía HTTP Response)"
-            ],
-            "id": "cbf404d3-5240-4666-9b20-9eefd5d74b04",
-            "source": {
-              "x": 488,
-              "y": 53
-            },
-            "target": {
-              "cell": "c2a2aa9f-c8f6-4309-a340-6a8623996ab6",
-              "port": "c86f561a-abc2-4d43-b4f9-0fb3b55b998a"
-            },
-            "vertices": [
-              {
-                "x": 300,
-                "y": 0
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Subida a RAM \n(HTTP POST /upload →\n multer.memoryStorage)",
               "description": "",
               "outOfScope": false,
@@ -1526,7 +1473,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1547,18 +1495,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "12f44e6c-1045-406b-b134-db2a19b6658e",
+                  "title": "Nueva amenaza STRIDE",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering / Manipulación",
+                  "description": "Introduzca una descripción para esta amenaza",
+                  "mitigation": "Introduzca la mitigación o prevención para esta amenaza",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "a6eddd82-079a-4d18-871e-6bc926ef93a6",
+                  "title": "Nueva amenaza STRIDE",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Introduzca una descripción para esta amenaza",
+                  "mitigation": "Introduzca la mitigación o prevención para esta amenaza",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
               "trustBoundaryIds": [
                 "40e90017-3bf1-4f74-b763-a15deaeb42bb"
               ],
               "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 0,
+                "tampering": 1,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
@@ -1578,6 +1553,81 @@
               {
                 "x": 360,
                 "y": -50
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Exfiltración de datos \n(buffer CSV vía HTTP Response)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "69d6c503-0473-4602-9914-2b7cfa72bfdb",
+                  "title": "Nueva amenaza STRIDE",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering / Manipulación",
+                  "description": "Introduzca una descripción para esta amenaza",
+                  "mitigation": "Introduzca la mitigación o prevención para esta amenaza",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "8a77fd5b-59c2-4aa4-8c20-cf7546582764",
+                "40e90017-3bf1-4f74-b763-a15deaeb42bb"
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Exfiltración de datos \n(buffer CSV vía HTTP Response)"
+            ],
+            "id": "cbf404d3-5240-4666-9b20-9eefd5d74b04",
+            "source": {
+              "cell": "e693a66a-1c59-4fbb-99c4-12a83b318c6e",
+              "port": "5d0b61ff-ae36-4bab-941c-08ca41906e56"
+            },
+            "target": {
+              "cell": "c2a2aa9f-c8f6-4309-a340-6a8623996ab6",
+              "port": "c86f561a-abc2-4d43-b4f9-0fb3b55b998a"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 0
               }
             ]
           },
@@ -1828,6 +1878,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 4
   }
 }
